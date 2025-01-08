@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import New from './New';
+import Home from './pages/Home';
+import Checkout from './pages/Checkout';
 
 const router = createBrowserRouter(
   [
@@ -13,8 +14,12 @@ const router = createBrowserRouter(
       children: [
         {
           index:true,
-          element: <New />,
-        }
+          element: <Home />,
+        },
+        {
+          path: '/checkout',
+          element: <Checkout />,
+        },
       ]
     }
   ]
